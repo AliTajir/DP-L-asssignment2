@@ -1,0 +1,17 @@
+# Use a base image with Python support
+FROM python:3.8
+
+# Set the working directory
+WORKDIR /app
+
+# Copy your application code to the container
+COPY question2.py /app/
+
+# Install any dependencies
+#RUN pip install -r requirements.txt  # If you have a requirements file
+
+# Expose a port if your application listens on a specific port
+EXPOSE 80
+
+# Define the command to run your application
+CMD ["python", "question2.py"]
